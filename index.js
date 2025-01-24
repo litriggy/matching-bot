@@ -8,7 +8,7 @@ import { joinParty } from './src/services/party.cjs';
 import ReadyEmbed from './src/components/ready.js';
 import { destroySession, findSession, updateSession } from './src/services/session.cjs';
 
-import matchType from "./src/data/matchTypes.json" assert {type: "json"}
+import {matchTypes} from "./src/data/matchTypes.js"
 
 db.sequelize.sync().then(() => { console.log('DB connected') })
 
@@ -122,7 +122,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
             await interaction.message.edit({ content, embeds: [embed], components: [] })
 
             let partyCh = await interaction.guild.channels.create({
-                name: `${interaction.member.displayName}-${size}v${size} ${matchType[type_str]}`,
+                name: `${interaction.member.displayName}-${size}v${size} ${matchTypes[type_str]}`,
                 type: ChannelType.GuildVoice,
                 parent: "1060737713063612489",
                 // your permission overwrites or other options here

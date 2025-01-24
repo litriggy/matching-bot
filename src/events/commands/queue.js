@@ -6,8 +6,7 @@ import { leaveQueue } from '../../controllers/queue.js';
 import { MMLogic } from '../../utils/matchMake.js';
 import { nanoid } from 'nanoid'
 
-import matchTypes from "../../data/typeRoles.json" assert { type: "json" };
-import emoji from "../../data/emoji.json" assert { type: "json" };
+import emoji from "../../data/emoji.js";
 import { createSession, destroySession, findSession } from '../../services/session.cjs';
 import ReadyEmbed from '../../components/ready.js';
 const create = () => {

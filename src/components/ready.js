@@ -1,6 +1,6 @@
 import { EmbedBuilder, ActionRowBuilder, ButtonStyle, ButtonBuilder } from 'discord.js';
-import emoji from "../data/emoji.json" assert { type: "json" };
-import types from "../data/matchTypes.json" assert { type: "json" };
+import {emoji} from "../data/emoji.js";
+import {matchTypes as types} from "../data/matchTypes.js";
 
 export default async function ReadyEmbed({
     interaction, party, size, type_str, sessionId, expiry

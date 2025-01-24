@@ -1,5 +1,4 @@
 import { db } from "../models/index.cjs"
-import matchTypes from "../data/typeRoles.json" assert { type: "json" };
 async function MMLogic(groupSize, groupType) {
     const groupRoles = {
         "2:hg": ["Heal", "RDPS"],
